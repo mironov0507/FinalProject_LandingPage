@@ -8,12 +8,14 @@
     <title>Главная</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <div class="site">
         <header class="header">
             <div class="container">
                 <div class="header_wrapper">
+                    <div class="burger">&#9776;</div>
                     <div class="logo">
                         <a href="/"><img src="img/logo.png" alt="Логотип"></a>
                     </div>
@@ -34,6 +36,18 @@
                         <a href="tel:+375447775311"><img src="img/icon-Tel.png">+375 44 777-53-11</a>
                     </div>
                 </div>
+            </div>
+            <div class="nav_mob">
+                <div class="but_close">x</div>
+                <ul>
+                    <li><a href="#m1">Преимущества</a></li>
+                    <li><a href="#m2">Как это работает</a></li>
+                    <li><a href="pages/catalog_chairs.html">Каталог стульев</a></li>
+                    <li><a href="pages/catalog_tables.html">Каталог столов</a></li>
+                    <li><a href="#m3">Галерея</a></li>
+                    <li><a href="pages/reviews.html">Отзывы</a></li>
+                    <li><a href="#m4">Контакты</a></li>
+                </ul>
             </div>
         </header>
         <main>
@@ -66,9 +80,10 @@
                     </div>
                     <div class="item1_pict1">
                         <img src="img/security-icon.png" alt="icon_4">
-                        <div id="m2" class="item1_text">Разработано<br> с учетом требований<br> врачей-педиатров</div>
+                        <div class="item1_text">Разработано<br> с учетом<br> требований<br> врачей-педиатров</div>
                     </div>
                 </div>
+                <div id="m2"></div>
             </div>
             
             <div class="bg_item2">
@@ -105,8 +120,8 @@
                 </div>
             </div>
             <div class="wrapper_item3">
-                <a href="#"><div class="buttonAction">Перейти в каталог</div></a>
-                <a href="#"><div class="buttonAction">Посмотреть отзывы</div></a>
+                <a href="#"><div class="buttonAction">Сделать заказ</div></a>
+                <a href="pages/reviews.html"><div class="buttonAction">Посмотреть отзывы</div></a>
             </div>
         </main>
         <footer>
