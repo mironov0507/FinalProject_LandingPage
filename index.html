@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="site">
-        <header class="header">
+        <header id="head" class="header">
             <div class="container">
                 <div class="header_wrapper">
                     <div class="burger">&#9776;</div>
@@ -37,18 +37,6 @@
                     </div>
                 </div>
             </div>
-            <div class="nav_mob">
-                <div class="but_close">x</div>
-                <ul>
-                    <li><a href="#m1">Преимущества</a></li>
-                    <li><a href="#m2">Как это работает</a></li>
-                    <li><a href="pages/catalog_chairs.html">Каталог стульев</a></li>
-                    <li><a href="pages/catalog_tables.html">Каталог столов</a></li>
-                    <li><a href="#m3">Галерея</a></li>
-                    <li><a href="pages/reviews.html">Отзывы</a></li>
-                    <li><a href="#m4">Контакты</a></li>
-                </ul>
-            </div>
         </header>
         <main>
             <div class="wrapper_promo">
@@ -60,7 +48,7 @@
                     <div class="promo_slogan">Уникальная детская мебель-трансформер</div>
                     <div class="line_1"></div>
                     <div class="promo_text2">Спешите заказать удобную и подходящую<br>мебель для Вашего ребенка!</div>
-                    <a href="#"><div class="button1">Заказать</div></a>
+                    <div class="button1 openOrd">Заказать</div>
                 </div>
             </div>
 
@@ -94,34 +82,66 @@
                     </div>
                     <div class="wrapper_item3">
                         <div class="item2 pop1">
-                            <a href="#"><div class="buttonPop">Пример<br> стула-трансформера</div></a>
+                            <div class="buttonPop chair">Пример<br> стула-трансформера</div>
                         </div>
                         <div class="item2 pop2">
-                            <a href="#"><div class="buttonPop">Пример<br> стола-трансформера</div></a>
+                            <div class="buttonPop table">Пример<br> стола-трансформера</div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="container">
                 <div id="m3" class="gallery_text">Фотогаллерея мебели</div>
-                <div class="gallery">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-10.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-2.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-21.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-25.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-3.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-43.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-45.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-46.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-49.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-5.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma-8.jpg" alt="foto mebel">
-                    <img src="img/mebel-transformer-shkolniku-dlya-doma.jpeg" alt="foto mebel">
-                </div>
             </div>
-            <div class="wrapper_item3">
-                <a href="#"><div class="buttonAction">Сделать заказ</div></a>
-                <a href="pages/reviews.html"><div class="buttonAction">Посмотреть отзывы</div></a>
+            <section class="promoS" id="slider">
+                <div class="container">
+                    <ul class="promoS_list">
+                        <li class="promoS_item">
+                            <div class="promoS_cont img20"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img21"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img22"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img23"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img24"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img25"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img26"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img27"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img28"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img29"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img30"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                        <li class="promoS_item">
+                            <div class="promoS_cont img31"><img src="img/1opacity.png" alt=""></div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="promo_but promo_but_prew" id="prev"><</button>
+                <button class="promo_but promo_but_next" id="next">></button>
+            </section>
+
+            <div class="wrapper_item4">
+                <div class="buttonAction openOrd">Сделать заказ</div>
+                <div class="buttonAction rew"><a href="pages/reviews.html">Посмотреть отзывы</a></div>
             </div>
         </main>
         <footer>
@@ -142,7 +162,7 @@
                                 <a href="https://www.youtube.com/" target="_blank"><div class="hoverS soc_you"></div></a>
                             </div>
                         </div>
-                        <a href="#"><div class="buttonUp">
+                        <a href="#head"><div class="buttonUp">
                                         <div class="wr_lines">
                                             <div class="lineL"></div>
                                             <div class="lineR"></div>
@@ -156,7 +176,8 @@
             </div>
         </footer>
     </div>
-
     <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>
+ 

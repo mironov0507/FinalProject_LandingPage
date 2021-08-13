@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Roboto Condensed', sans-serif; 
     font-weight: 300;
@@ -41,6 +44,10 @@ header{
     text-align: center;
     display: none;
     margin-right: 30px;
+}
+.burger:hover{
+    cursor: pointer;
+    background-color: rgb(241, 209, 209);
 }
 .nav{
     margin-left: auto;
@@ -96,7 +103,6 @@ header{
     margin-right: 5px;
 }
 .nav_mob{
-    display: none;
     z-index: 1;
     width: 300px;
     height: 500px;
@@ -122,7 +128,15 @@ header{
     display: inline-block;
     padding: 5px 5px;
 }
-.nav_mob .but_close{
+.bg_close{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.but_close{
     width: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
@@ -132,7 +146,7 @@ header{
     margin-right: 15px;
     text-align: center;
 }
-.nav_mob .but_close:hover{
+.but_close:hover{
     font-weight: bold;
     cursor: pointer;
 }
@@ -333,7 +347,8 @@ header{
     font-weight: bold;
     line-height: 35px;
 }
-.wrapper_item3{
+.wrapper_item3,
+.wrapper_item4{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
@@ -353,15 +368,12 @@ header{
 .wrapper_item3 .item2.pop2{
     background-image: url(../img/13hq.png);
 }
-.wrapper_item3 a{
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-}
 .buttonPop{
     width: 220px;
     height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
     background-color: rgb(205, 229, 243);
     color: #000;
     text-align: center;
@@ -373,9 +385,11 @@ header{
     box-shadow: 0 0 15px gray;
 }
 .buttonPop:hover{
+    cursor: pointer;
     background-color: rgb(181, 222, 247);
     transform: translateY(-2px);
     transition: 0.15s;
+    box-shadow: 0 5px 20px gray;
 }
 .gallery_text{
     width: 100%;
@@ -387,7 +401,57 @@ header{
     font-weight: bold;
     padding-top: 20px;
     margin-top: 150px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+}
+.promoS{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.promoS_list{
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+}
+.promoS_item{
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+.promoS_cont{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.promoS_cont img{
+    width: 100%;
+}
+.promo_but{
+    font-size: 34px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(93, 95, 134, 0.7);
+    padding: 25px 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.promo_but:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    background-color:rgba(118, 119, 136, 0.4);
+}
+.last{
+    color: rgba(255, 255, 255, 0.8);
+    background-color:rgba(118, 119, 136, 0.4);
+}
+.promo_but_prew{
+    left: 10.1%;
+}
+.promo_but_next{
+    right: 10.1%;
 }
 .gallery img{
     height: 200px;
@@ -395,6 +459,8 @@ header{
 .buttonAction{
     width: 220px;
     height: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     font-weight: normal;
     background-color: rgb(104, 46, 42);
     color: rgb(255, 255, 255);
@@ -405,7 +471,20 @@ header{
     margin-right: auto;
     margin-top: 60px;
 }
+.buttonAction.rew{
+    height: 80px;
+    padding-top: 0;
+}
+.buttonAction a{
+    display: inline-block;
+    width: 100%;
+    height: 55px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-top: 25px;
+}
 .buttonAction:hover{
+    cursor: pointer;
     background-color: rgb(138, 62, 57);
     transform: translateY(2px);
     transition: 0.15s;
@@ -424,7 +503,7 @@ header{
     display: flex;
     position: relative;
 }
-.wrapper_contacts .contacts{
+.contacts{
     width: 40%;
     height: 100%;
     text-align: center;
@@ -458,7 +537,32 @@ header{
 }
 .contacts .contacts_text2{
     font-size: 20px;
-    margin-top: 20%;
+    margin-top: 15%;
+}
+.wrapper_exchenge{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.wrapper_exchenge .exch_text{
+    width: 110px;
+    height: 40px;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 7px;
+}
+.wrapper_exchenge .currency{
+    width: 110px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    margin-left: 2px;
+}
+.currency .curr_v{
+    padding: 0 5px;
+}
+.currency .curr_v span{
+    font-weight: bold;
 }
 .buttonUp{
     width: 70px;
@@ -621,4 +725,162 @@ header{
 }
 .img16{
     background-image: url(../img/t8.jpg);
+}
+.img20{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-43.jpg);
+}
+.img21{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-45.jpg);
+}
+.img22{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-46.jpg);
+}
+.img23{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-49.jpg);
+}
+.img24{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-5.jpg);
+}
+.img25{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-8.jpg);
+}
+.img26{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma.jpeg);
+}
+.img27{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-10.jpg);
+}
+.img28{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-2.jpg);
+}
+.img29{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-21.jpg);
+}
+.img30{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-25.jpg);
+}
+.img31{
+    background-image: url(../img/mebel-transformer-shkolniku-dlya-doma-3.jpg);
+}
+.bg_form{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(119, 98, 85, 0.3);
+}
+.gray{
+    color: rgb(56, 56, 56);
+}
+.pop_ord{
+    z-index: 3;
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 25px;
+    position: fixed;
+    top: 140px;
+    left: calc(50% - 300px);
+    box-shadow: 0 0 30px rgb(70, 70, 70);
+    text-align: center;
+}
+.field{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(90, 34, 92);
+    margin-top: 30px;
+}
+.field input{
+    width: 300px;
+    height: 40px;
+    font-size: 22px;
+}
+.text_order{
+    margin-top: 40px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 215, 183);
+    border-top: 2px solid  rgb(255, 177, 113);
+    border-bottom: 2px solid  rgb(255, 177, 113);
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(90, 34, 92);
+    padding-top: 5px;
+}
+.pop_ord button{
+    width: 180px;
+    height: 50px;
+    background-color: rgb(231, 145, 111);
+    color: rgb(90, 34, 92);
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+}
+.pop_ord button:hover{
+    background-color: rgb(230, 121, 78);
+    transform: translateY(1px);
+    transition: 0.15s;
+}
+.pop_exm{
+    z-index: 3;
+    width: 700px;
+    height: 700px;
+    background-color: #fff;
+    border-radius: 25px;
+    position: fixed;
+    top: 140px;
+    left: calc(50% - 350px);
+    box-shadow: 0 0 30px rgb(70, 70, 70);
+    text-align: center;
+    overflow: hidden;
+}
+.title_pop{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(90, 34, 92);
+}
+.wrapper_foto{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    height: 85%;
+    margin: 10px;
+}
+.wrapper_foto .item_pop{
+    flex: 1 1 calc(50% - 18px);
+    margin: 7px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 2px solid rgb(201, 201, 201);
+}
+.f_1{
+    background-image: url(../img/ch_1.jpg);
+}
+.f_2{
+    background-image: url(../img/ch_2.jpg);
+}
+.f_3{
+    background-image: url(../img/ch_3.jpg);
+}
+.f_4{
+    background-image: url(../img/ch_4.jpg);
+}
+.f_5{
+    background-image: url(../img/t_1.png);
+}
+.f_6{
+    background-image: url(../img/t_2.jpg);
+}
+.f_7{
+    background-image: url(../img/t_3.jpg);
+}
+.f_8{
+    background-image: url(../img/t_4.jpg);
 }
